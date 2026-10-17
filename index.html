@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="theme-color" content="#edf1db">
+	<title>Jueguitos Club — 1.000 mini juegos</title>
+	<link rel="stylesheet" href="styles.css">
+	<link rel="stylesheet" href="puzzle.css">
+	<link rel="stylesheet" href="animal.css">
+	<link rel="stylesheet" href="recipe.css">
+	<script src="game.js" defer></script>
+</head>
+<body>
+	<main class="app-shell">
+		<header class="masthead">
+			<a class="wordmark" href="#catalog" aria-label="Jueguitos Club, inicio"><span class="logo-mark">J!</span><span>jueguitos<span class="wordmark-small">CLUB DE ARCADE</span></span></a>
+			<div class="head-note"><span class="online-dot"></span> 1.000 JUEGOS · 0 DESCARGAS</div>
+			<div class="head-actions"><button class="fullscreen-button" id="fullscreen-toggle" type="button" aria-label="Pantalla completa" title="Pantalla completa">⛶</button><button class="head-random" id="random-game" type="button"><span>✳</span> SORPRÉNDEME</button></div>
+		</header>
+
+		<section id="catalog-screen" class="catalog-screen">
+			<div class="catalog-intro">
+				<div><span class="eyebrow">TU SALA DE JUEGOS</span><h1>Elige algo.<br><em>Juega un rato.</em></h1></div>
+				<p>Mil juegos pequeños, hechos para abrirse<br class="desktop-break"> en un momento y jugarse donde sea.</p>
+			</div>
+			<div class="catalog-tools">
+				<label class="search-box"><span>⌕</span><input id="search" type="search" placeholder="Buscar un juego..." autocomplete="off"><kbd>/</kbd></label>
+				<div class="catalog-count"><b id="visible-count">1.000</b><span>JUEGOS</span></div>
+			</div>
+			<nav id="category-tabs" class="category-tabs" aria-label="Categorías de juegos"></nav>
+			<section id="game-grid" class="game-grid" aria-label="Catálogo de juegos"></section>
+			<div id="empty-state" class="empty-state hidden"><span>☁</span><b>No encontramos ese juego.</b><button id="clear-search" type="button">Limpiar búsqueda</button></div>
+			<footer class="catalog-footer"><span>HECHOS CON CURIOSIDAD Y DEMASIADO CAFÉ</span><span>SELECCIÓN ALEATORIA <b>✳</b></span></footer>
+		</section>
+
+		<section id="game-screen" class="game-screen hidden" aria-live="polite">
+			<div class="game-nav"><button id="back-to-catalog" class="back-button" type="button"><span>←</span> TODOS LOS JUEGOS</button><span id="game-category-label" class="game-category-label"></span><button id="game-random" class="random-icon" type="button" aria-label="Abrir otro juego" title="Otro juego">⤨</button></div>
+			<div class="game-heading"><div><span id="game-eyebrow" class="eyebrow">MINI JUEGO</span><h1 id="game-title">Juego</h1><p id="game-description"></p></div><div class="best-score"><small>RÉCORD</small><b id="best-score">0</b></div></div>
+			<div id="game-stage" class="game-stage"></div>
+			<div class="game-bottom"><span id="game-instructions">Toca para jugar</span><span>ESC <b>VOLVER AL CATÁLOGO</b></span></div>
+		</section>
+	</main>
+	<div id="toast" class="toast hidden" role="status"></div>
+</body>
+</html>

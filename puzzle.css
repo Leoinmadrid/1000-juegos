@@ -1,0 +1,5 @@
+#puzzle-grid.puzzle-grid{grid-template-columns:repeat(var(--puzzle-cols,3),minmax(0,1fr))!important}
+#puzzle-grid.puzzle-grid[style*="--puzzle-cols:4"]{width:min(390px,100%)}
+#puzzle-grid .puzzle-tile,#puzzle-grid .puzzle-empty{aspect-ratio:1;min-width:0;padding:0}
+.game-card .card-tutorial{width:100%;min-height:20px;display:-webkit-box;overflow:hidden;margin-top:4px;color:#718276;font:8px/1.25 'DM Sans',sans-serif;letter-spacing:0;text-align:left;text-transform:none;-webkit-box-orient:vertical;-webkit-line-clamp:2}
+@media(max-width:700px){.game-card{min-height:142px}.game-card .card-tutorial{min-height:18px;font-size:7px;line-height:1.25}}
